@@ -1,5 +1,23 @@
 #include <iostream>
+#include <cmath>
+#include <iomanip>
 using namespace std;
+void aproximacion(double limite, double contador, double acumulador){
+    double numerador, denominador, total, total_final;
+    if (contador >= limite){
+        total_final = 4*acumulador;
+        cout << "La aproximacion de pi es: " << total_final;
+        cout<<endl;
+    }
+    else{
+        numerador = pow(-1.0, contador);
+        denominador = ((2.0 * contador) + 1.0); 
+        total =  numerador/denominador;
+        acumulador += total;
+        aproximacion(limite, contador + 1, acumulador);
+    }
+}
+
 int main(){
     char resp='s';
     int respuesta_usuario;
@@ -16,14 +34,24 @@ int main(){
             
             break;
         case 2:
-            break;
+        {
+          
+        }
+        break;
         
         case 3:
-            break;
-
+        {
+            double limite, contador=0, acumulador=0;
+            cout<<"Ingrese limite: ";
+            cin>>limite;
+            aproximacion(limite, contador, acumulador);
+        }
+        break;
+        
         case 4:
             return (0);
-            break;
+        break;
         }
     }
 }
+
