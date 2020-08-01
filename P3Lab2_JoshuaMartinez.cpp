@@ -22,8 +22,8 @@ int main(){
     char resp='s';
     int respuesta_usuario;
     while(resp=='s' || resp=='S'){
-        cout<<"2. Matriz"<<endl;
-        cout<<"3. Pi"<<endl;
+        cout<<"2. Estandarizar matriz"<<endl;
+        cout<<"3. Aproximar PI"<<endl;
         cout<<"4. Salir"<<endl;
         cout<<"Ingrese una opcion: ";
         cin>>respuesta_usuario;
